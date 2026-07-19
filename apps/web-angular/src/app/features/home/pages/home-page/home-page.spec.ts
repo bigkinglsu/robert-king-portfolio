@@ -37,6 +37,19 @@ describe('HomePage', () => {
 
     expect(links).toHaveLength(2);
     expect(links[0].textContent?.trim()).toBe('View projects');
+    expect(links[0].getAttribute('href')).toBe('#projects');
     expect(links[1].textContent?.trim()).toBe('Contact me');
+    expect(links[1].getAttribute('href')).toBe('mailto:kinghonore1@gmail.com');
+  });
+
+  it('should provide a target for the projects call to action', () => {
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const projects = compiled.querySelector<HTMLElement>('#projects');
+    const heading = projects?.querySelector<HTMLHeadingElement>('h2');
+
+    expect(projects).toBeTruthy();
+    expect(heading?.textContent).toContain('Projects built with purpose.');
   });
 });
