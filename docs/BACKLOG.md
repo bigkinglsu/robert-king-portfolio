@@ -4,15 +4,15 @@
 
 - [x] Initialize repository
 - [x] Create Angular application
-- [ ] Configure project architecture
-- [ ] Create layout shell
-- [ ] Configure routing
+- [x] Configure project architecture
+- [x] Create layout shell
+- [x] Configure routing
 - [ ] Add theme support
-- [ ] Responsive layout
+- [x] Responsive layout
 
 ## Phase 2 - Portfolio
 
-- [ ] Home
+- [x] Home
 - [ ] About
 - [ ] Experience
 - [ ] Projects
