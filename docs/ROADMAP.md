@@ -25,7 +25,8 @@ Status: Planned.
 
 Deploy the application to AWS with an automated CI/CD pipeline.
 
-Status: Planned.
+Status: In progress. Frontend validation now runs in GitHub Actions. AWS deployment and continuous
+delivery remain.
 
 ## Target
 

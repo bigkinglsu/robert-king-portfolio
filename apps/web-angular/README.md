@@ -67,6 +67,22 @@ change causes a mismatch:
 Snapshot inputs should exclude framework-generated attributes and normalize dynamic values so
 snapshots change only when meaningful component output changes.
 
+## Continuous integration
+
+The GitHub Actions CI workflow runs for pull requests targeting `main`, pushes to `main`, and
+manual dispatches. It installs locked dependencies, type-checks the test project, runs the unit and
+snapshot tests once, builds the production application, and uploads the build output as a
+short-lived workflow artifact.
+
+Run the same validation commands locally with:
+
+```bash
+npm ci
+npm run typecheck:test
+npm run test:ci
+npm run build
+```
+
 ## Running end-to-end tests
 
 For end-to-end (e2e) testing, run:

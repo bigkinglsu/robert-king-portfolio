@@ -33,5 +33,6 @@
 ## Phase 4 - Cloud
 
 - [ ] AWS
+- [x] Add frontend CI validation
 - [ ] CI/CD
 - [ ] Deployment

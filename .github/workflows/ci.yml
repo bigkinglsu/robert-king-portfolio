@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web-angular:
+    name: Angular
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    defaults:
+      run:
+        working-directory: apps/web-angular
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/web-angular/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check tests
+        run: npm run typecheck:test
+
+      - name: Run tests
+        run: npm run test:ci
+
+      - name: Build production application
+        run: npm run build
+
+      - name: Upload production artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: web-angular
+          path: apps/web-angular/dist/web-angular
+          if-no-files-found: error
+          retention-days: 7
