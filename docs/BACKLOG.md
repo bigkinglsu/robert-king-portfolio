@@ -7,6 +7,9 @@
 - [x] Configure project architecture
 - [x] Create layout shell
 - [x] Configure routing
+- [x] Add responsive header navigation
+- [x] Complete responsive footer
+- [x] Add component snapshot testing
 - [ ] Add theme support
 - [x] Responsive layout
 

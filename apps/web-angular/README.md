@@ -44,6 +44,29 @@ To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use th
 ng test
 ```
 
+For a single non-watch run, use:
+
+```bash
+ng test --watch=false
+```
+
+### Snapshot testing
+
+Focused component snapshots are stored in `__snapshots__` directories next to their test files.
+Snapshots complement behavioral assertions; they do not replace tests for links, accessibility,
+or interactions.
+
+Normal test runs compare rendered output with committed snapshots. When an intentional component
+change causes a mismatch:
+
+1. Review the reported snapshot difference.
+2. Run `ng test` in watch mode.
+3. Press `u` to accept the intentional update.
+4. Review the generated `.snap` diff before committing it.
+
+Snapshot inputs should exclude framework-generated attributes and normalize dynamic values so
+snapshots change only when meaningful component output changes.
+
 ## Running end-to-end tests
 
 For end-to-end (e2e) testing, run:

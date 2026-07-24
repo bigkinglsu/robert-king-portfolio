@@ -5,7 +5,8 @@
 Establish the Angular architecture, application shell, routing, global design
 foundation, and responsive behavior.
 
-Status: In progress. Theme support remains.
+Status: In progress. The responsive application shell, component tests, and initial footer
+snapshot coverage are in place. Theme support remains.
 
 ## Phase 2 - Portfolio
 
