@@ -1,5 +1,7 @@
 # Robert King Portfolio
 
+[![CI](https://github.com/bigkinglsu/robert-king-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/bigkinglsu/robert-king-portfolio/actions/workflows/ci.yml)
+
 A modern full-stack engineering portfolio built to demonstrate enterprise software engineering practices.
 
 ## Technology
@@ -9,6 +11,7 @@ A modern full-stack engineering portfolio built to demonstrate enterprise softwa
 - Spring Boot
 - PostgreSQL
 - AWS
+- GitHub Actions
 
 ## Goals
 
