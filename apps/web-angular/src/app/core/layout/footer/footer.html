@@ -1,15 +1,16 @@
 <footer class="site-footer">
   <div class="site-footer__content">
     <div class="site-footer__summary">
-      <a class="site-footer__brand" href="#home">Robert King</a>
+      <a class="site-footer__brand" routerLink="/" fragment="home">Robert King</a>
       <p>Software engineer building reliable, accessible applications for the web.</p>
     </div>
 
     <nav class="site-footer__navigation" aria-label="Footer navigation">
       <h2>Explore</h2>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a routerLink="/" fragment="home">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/" fragment="projects">Projects</a></li>
       </ul>
     </nav>
 
@@ -28,7 +29,7 @@
 
     <div class="site-footer__bottom">
       <p>&copy; {{ currentYear }} Robert King. Built with Angular.</p>
-      <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+      <a routerLink="/" fragment="home">Back to top <span aria-hidden="true">↑</span></a>
     </div>
   </div>
 </footer>
