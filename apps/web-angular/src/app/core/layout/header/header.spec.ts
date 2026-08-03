@@ -41,4 +41,14 @@ describe('Header', () => {
     expect(links[2].getAttribute('href')).toBe('#projects');
     expect(links[3].getAttribute('href')).toBe('mailto:kinghonore1@gmail.com');
   });
+
+  it('should match the rendered header snapshot', () => {
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const header = compiled.querySelector<HTMLElement>('.site-header');
+
+    expect(header).toBeTruthy();
+    expect(header).toMatchSnapshot();
+  });
 });

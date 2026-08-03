@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > should match the rendered header snapshot 1`] = `"<header class="site-header"><nav aria-label="Primary navigation" class="navigation"><a href="#home" class="navigation__brand">Robert King</a><ul class="navigation__links"><li><a href="#home">Home</a></li><li><a href="#projects">Projects</a></li><li><a href="mailto:kinghonore1@gmail.com">Contact</a></li></ul></nav></header>"`;

@@ -52,9 +52,9 @@ ng test --watch=false
 
 ### Snapshot testing
 
-Focused component snapshots are stored in `__snapshots__` directories next to their test files.
-Snapshots complement behavioral assertions; they do not replace tests for links, accessibility,
-or interactions.
+Focused snapshots cover the application shell and every current Angular component. They are stored
+in `__snapshots__` directories next to their test files. Snapshots complement behavioral
+assertions; they do not replace tests for links, accessibility, or interactions.
 
 Normal test runs compare rendered output with committed snapshots. When an intentional component
 change causes a mismatch:
@@ -65,7 +65,31 @@ change causes a mismatch:
 4. Review the generated `.snap` diff before committing it.
 
 Snapshot inputs should exclude framework-generated attributes and normalize dynamic values so
-snapshots change only when meaningful component output changes.
+snapshots change only when meaningful component output changes. A global Vitest snapshot serializer
+applies this normalization whenever a rendered HTML element is passed to `toMatchSnapshot()`.
+
+The serializer is implemented in
+`src/app/testing/angular-html-snapshot-serializer.ts` and registered for every test through
+`src/app/testing/test-setup.ts`. Angular loads that setup file from the test target in
+`angular.json`. It currently normalizes:
+
+- Angular `_ngcontent-*` and `_nghost-*` attributes
+- the Angular `ng-version` attribute
+- generated test-host IDs such as `root2`
+- the dynamic copyright year
+
+Snapshot the smallest meaningful rendered element when possible:
+
+```ts
+const header = fixture.nativeElement.querySelector<HTMLElement>('.site-header');
+
+expect(header).toBeTruthy();
+expect(header).toMatchSnapshot();
+```
+
+Do not manually serialize `outerHTML` or repeat normalization inside component tests. When a new
+dynamic value needs normalization, add the rule to the shared serializer and cover it through the
+normal test suite.
 
 ## Continuous integration
 

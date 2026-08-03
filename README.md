@@ -20,3 +20,13 @@ A modern full-stack engineering portfolio built to demonstrate enterprise softwa
 - Practice modern Angular
 - Practice cloud deployment
 - Serve as a living engineering portfolio
+
+## Frontend quality
+
+The Angular application uses Vitest for behavioral, accessibility, and snapshot tests. Every
+current component has snapshot coverage, with a global serializer that removes Angular-generated
+markup and normalizes dynamic values before snapshots are compared. Pull requests and pushes to
+`main` run test type-checking, the complete test suite, and a production build in GitHub Actions.
+
+See the [Angular application README](apps/web-angular/README.md#snapshot-testing) for the snapshot
+workflow and local validation commands.

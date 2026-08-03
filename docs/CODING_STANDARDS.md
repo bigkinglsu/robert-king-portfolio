@@ -14,8 +14,11 @@
 - Smart/Dumb component separation
 - Unit tests use Vitest through the Angular test runner
 - Use focused snapshots for stable rendered component structure
+- Pass rendered `HTMLElement` instances directly to `toMatchSnapshot()`
+- Snapshot the smallest meaningful component root or section when possible
 - Keep behavioral assertions for links, accessibility, and interactions
-- Remove or normalize framework-generated and dynamic values before snapshotting
+- Normalize framework-generated attributes and approved dynamic values only in the global Vitest
+  serializer; do not duplicate cleanup in component tests
 - Review snapshot diffs before accepting intentional updates
 
 ## Java
