@@ -19,6 +19,8 @@ Infrastructure (Future)
 Architecture Style
 
 - Feature-based Angular architecture
+- Lazy-loaded visitor-facing feature routes
+- Router-managed fragment navigation and scroll-position restoration
 - REST API
 - Clean Architecture principles
 

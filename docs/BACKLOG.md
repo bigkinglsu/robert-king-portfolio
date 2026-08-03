@@ -18,7 +18,7 @@
 ## Phase 2 - Portfolio
 
 - [x] Home
-- [ ] About
+- [x] About
 - [ ] Experience
 - [ ] Projects
 - [ ] Skills

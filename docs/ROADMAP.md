@@ -14,7 +14,7 @@ Vitest serializer. Theme support remains.
 Build the visitor-facing Home, About, Experience, Projects, Skills,
 Certifications, and Contact features.
 
-Status: In progress. The Home experience is complete.
+Status: In progress. The Home and About experiences are complete.
 
 ## Phase 3 - Backend
 

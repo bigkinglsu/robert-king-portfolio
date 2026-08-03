@@ -8,6 +8,14 @@ export const routes: Routes = [
     title: 'Robert King | Software Engineer',
   },
   {
+    path: 'about',
+    loadComponent: () =>
+      import('./features/about/pages/about-page/about-page').then(
+        (component) => component.AboutPage,
+      ),
+    title: 'About | Robert King',
+  },
+  {
     path: '**',
     redirectTo: '',
   },
