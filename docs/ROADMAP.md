@@ -5,8 +5,9 @@
 Establish the Angular architecture, application shell, routing, global design
 foundation, and responsive behavior.
 
-Status: In progress. The responsive application shell, component tests, and initial footer
-snapshot coverage are in place. Theme support remains.
+Status: In progress. The responsive application shell, component tests, and snapshot coverage for
+all current Angular components are in place. Snapshot normalization is centralized through a global
+Vitest serializer. Theme support remains.
 
 ## Phase 2 - Portfolio
 

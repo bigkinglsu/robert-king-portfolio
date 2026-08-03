@@ -22,3 +22,20 @@ Much easier to maintain long term.
 Tradeoff:
 The initial design system remains intentionally small.
 New tokens should be added only when multiple components need them.
+
+## 2026-08-02
+
+### Stable Angular snapshots
+
+- Use Vitest snapshots alongside explicit behavioral and accessibility assertions.
+- Register one global HTML serializer through the Angular test target instead of normalizing HTML
+  separately in each component test.
+- Remove Angular-generated attributes, test-host IDs, and framework-version metadata from snapshot
+  inputs, and normalize approved dynamic values such as the copyright year.
+- Pass rendered HTML elements directly to `toMatchSnapshot()` and keep snapshot files beside their
+  component tests.
+
+Tradeoff:
+The serializer adds a small shared testing abstraction, but snapshots remain focused on meaningful
+rendered markup and avoid failures caused only by test order, Angular compilation identifiers, or
+calendar changes.

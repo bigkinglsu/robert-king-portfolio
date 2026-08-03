@@ -10,6 +10,8 @@
 - [x] Add responsive header navigation
 - [x] Complete responsive footer
 - [x] Add component snapshot testing
+- [x] Add snapshot coverage for all current Angular components
+- [x] Centralize Angular snapshot normalization in a global Vitest serializer
 - [ ] Add theme support
 - [x] Responsive layout
 

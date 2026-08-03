@@ -52,4 +52,12 @@ describe('HomePage', () => {
     expect(projects).toBeTruthy();
     expect(heading?.textContent).toContain('Projects built with purpose.');
   });
+
+  it('should match the rendered home page snapshot', () => {
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    expect(compiled).toMatchSnapshot();
+  });
 });

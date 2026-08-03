@@ -24,4 +24,13 @@ describe('App', () => {
     expect(compiled.querySelector('main')).toBeTruthy();
     expect(compiled.querySelector('app-footer')).toBeTruthy();
   });
+
+  it('should match the rendered application shell snapshot', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    expect(compiled).toMatchSnapshot();
+  });
 });

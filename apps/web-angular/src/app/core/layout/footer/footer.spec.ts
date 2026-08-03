@@ -54,21 +54,8 @@ describe('Footer', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
     const footer = compiled.querySelector<HTMLElement>('.site-footer');
-    const snapshot = footer?.cloneNode(true) as HTMLElement | undefined;
 
-    for (const element of snapshot ? [snapshot, ...snapshot.querySelectorAll('*')] : []) {
-      for (const attribute of [...element.attributes]) {
-        if (attribute.name.startsWith('_ngcontent-') || attribute.name.startsWith('_nghost-')) {
-          element.removeAttribute(attribute.name);
-        }
-      }
-    }
-
-    const html = snapshot?.outerHTML.replace(
-      `${new Date().getFullYear()} Robert King`,
-      '[current year] Robert King',
-    );
-
-    expect(html).toMatchSnapshot();
+    expect(footer).toBeTruthy();
+    expect(footer).toMatchSnapshot();
   });
 });
