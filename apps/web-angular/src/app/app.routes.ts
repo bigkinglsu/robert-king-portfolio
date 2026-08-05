@@ -8,6 +8,14 @@ export const routes: Routes = [
     title: 'Robert King | Software Engineer',
   },
   {
+    path: 'experience',
+    loadComponent: () =>
+      import('./features/experience/pages/experience-page/experience-page').then(
+        (component) => component.ExperiencePage,
+      ),
+    title: 'Experience | Robert King',
+  },
+  {
     path: 'about',
     loadComponent: () =>
       import('./features/about/pages/about-page/about-page').then(

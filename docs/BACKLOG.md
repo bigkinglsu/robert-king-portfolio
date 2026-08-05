@@ -20,6 +20,8 @@
 - [x] Home
 - [x] About
 - [ ] Experience
+  - [x] Add page component, lazy route, navigation, and baseline tests
+  - [ ] Add professional history and impact content
 - [ ] Projects
 - [ ] Skills
 - [ ] Certifications

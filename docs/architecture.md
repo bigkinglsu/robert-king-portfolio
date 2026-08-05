@@ -19,6 +19,7 @@ Infrastructure (Future)
 Architecture Style
 
 - Feature-based Angular architecture
+- Page components live under `features/<feature>/pages/<page>`
 - Lazy-loaded visitor-facing feature routes
 - Router-managed fragment navigation and scroll-position restoration
 - REST API
