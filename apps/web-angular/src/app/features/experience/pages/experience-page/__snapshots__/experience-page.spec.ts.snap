@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ExperiencePage > should match the rendered Experience page snapshot 1`] = `"<main aria-labelledby="experience-title" class="experience-page"><div class="experience-page__content"><p class="experience-page__eyebrow">Experience</p><h1 id="experience-title">Building dependable software, one thoughtful decision at a time.</h1><p class="experience-page__summary"> A detailed look at my roles, responsibilities, and engineering impact is coming soon. </p></div></main>"`;
