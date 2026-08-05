@@ -24,7 +24,7 @@ describe('ExperiencePage', () => {
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
-    const page = compiled.querySelector<HTMLElement>('main[aria-labelledby="experience-title"]');
+    const page = compiled.querySelector<HTMLElement>('section[aria-labelledby="experience-title"]');
     const heading = compiled.querySelector<HTMLHeadingElement>('#experience-title');
     const summary = compiled.querySelector<HTMLElement>('.experience-page__summary');
 
