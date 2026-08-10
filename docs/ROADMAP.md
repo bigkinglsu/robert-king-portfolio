@@ -14,7 +14,9 @@ Vitest serializer. Theme support remains.
 Build the visitor-facing Home, About, Experience, Projects, Skills,
 Certifications, and Contact features.
 
-Status: In progress. The Home and About experiences are complete.
+Status: In progress. The Home and About experiences are complete, and the Experience page scaffold
+is in place for its professional history and impact content. Primary navigation accommodates the
+additional feature route across desktop and mobile layouts.
 
 ## Phase 3 - Backend
 

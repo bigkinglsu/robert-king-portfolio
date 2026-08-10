@@ -9,6 +9,7 @@
 ## Angular
 
 - Standalone Components
+- Keep visitor-facing pages in their feature's `pages` directory and lazy-load them from the router
 - Signals preferred
 - RxJS only when appropriate
 - Smart/Dumb component separation

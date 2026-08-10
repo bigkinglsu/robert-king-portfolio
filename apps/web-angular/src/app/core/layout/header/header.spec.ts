@@ -37,12 +37,13 @@ describe('Header', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const links = compiled.querySelectorAll<HTMLAnchorElement>('.navigation a');
 
-    expect(links).toHaveLength(5);
+    expect(links).toHaveLength(6);
     expect(links[0].getAttribute('href')).toBe('/#home');
     expect(links[1].getAttribute('href')).toBe('/#home');
-    expect(links[2].getAttribute('href')).toBe('/about');
-    expect(links[3].getAttribute('href')).toBe('/#projects');
-    expect(links[4].getAttribute('href')).toBe('mailto:kinghonore1@gmail.com');
+    expect(links[2].getAttribute('href')).toBe('/experience');
+    expect(links[3].getAttribute('href')).toBe('/about');
+    expect(links[4].getAttribute('href')).toBe('/#projects');
+    expect(links[5].getAttribute('href')).toBe('mailto:kinghonore1@gmail.com');
   });
 
   it('should match the rendered header snapshot', () => {
