@@ -51,9 +51,29 @@ describe('ExperiencePage', () => {
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
-    const page = compiled.querySelector<HTMLElement>(':scope > *');
+    const page = compiled.querySelector<HTMLElement>('.experience-hero');
 
     expect(page).toBeTruthy();
     expect(page).toMatchSnapshot();
+  });
+
+  it('should match the rendered career timeline snapshot', () => {
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const career = compiled.querySelector<HTMLElement>('.career');
+
+    expect(career).toBeTruthy();
+    expect(career).toMatchSnapshot();
+  });
+
+  it('should match the rendered selected engagements snapshot', () => {
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const engagements = compiled.querySelector<HTMLElement>('.engagements');
+
+    expect(engagements).toBeTruthy();
+    expect(engagements).toMatchSnapshot();
   });
 });
