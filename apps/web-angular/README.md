@@ -2,8 +2,9 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.5.
 
-The visitor-facing application currently includes lazy-loaded Home, About, and Experience pages
-within a shared responsive header and footer shell.
+The visitor-facing application currently includes lazy-loaded Home, About, Experience, and Projects
+pages within a shared responsive header and footer shell. The Projects page presents the public
+portfolio repository with descriptive technology labels and safe external links.
 
 ## Development server
 

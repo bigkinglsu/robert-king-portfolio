@@ -16,6 +16,14 @@ export const routes: Routes = [
     title: 'Experience | Robert King',
   },
   {
+    path: 'projects',
+    loadComponent: () =>
+      import('./features/projects/pages/projects-page/projects-page').then(
+        (component) => component.ProjectsPage,
+      ),
+    title: 'Projects | Robert King',
+  },
+  {
     path: 'about',
     loadComponent: () =>
       import('./features/about/pages/about-page/about-page').then(
