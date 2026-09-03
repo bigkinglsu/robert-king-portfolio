@@ -22,7 +22,8 @@
 - [x] Experience
   - [x] Add page component, lazy route, navigation, and baseline tests
   - [x] Add professional history and impact content
-- [ ] Projects
+- [x] Projects
+  - [x] Add page component, lazy route, navigation, public project cards, and tests
 - [ ] Skills
 - [ ] Certifications
 - [ ] Contact

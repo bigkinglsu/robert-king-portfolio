@@ -16,4 +16,12 @@ describe('Application routes', () => {
     expect(aboutRoute?.loadComponent).toBeTypeOf('function');
     expect(aboutRoute?.title).toBe('About | Robert King');
   });
+
+  it('should lazy load the Projects page with its page title', () => {
+    const projectsRoute = routes.find((route) => route.path === 'projects');
+
+    expect(projectsRoute).toBeTruthy();
+    expect(projectsRoute?.loadComponent).toBeTypeOf('function');
+    expect(projectsRoute?.title).toBe('Projects | Robert King');
+  });
 });

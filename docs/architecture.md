@@ -21,6 +21,8 @@ Architecture Style
 - Feature-based Angular architecture
 - Page components live under `features/<feature>/pages/<page>`
 - Lazy-loaded visitor-facing feature routes
+- Projects feature content is sourced from selected public repositories and uses direct external
+  links rather than runtime API requests
 - Router-managed fragment navigation and scroll-position restoration
 - REST API
 - Clean Architecture principles
