@@ -23,7 +23,7 @@
   - [x] Add page component, lazy route, navigation, and baseline tests
   - [x] Add professional history and impact content
 - [x] Projects
-  - [x] Add page component, lazy route, navigation, public project cards, and tests
+  - [x] Add page component, lazy route, navigation, portfolio project card, and tests
 - [ ] Skills
 - [ ] Certifications
 - [ ] Contact

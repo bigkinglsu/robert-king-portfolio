@@ -64,6 +64,7 @@ h1 {
 .project-grid {
   display: grid;
   gap: 1rem;
+  max-width: 48rem;
   margin-top: 3rem;
 }
 
@@ -75,10 +76,6 @@ h1 {
   border: 1px solid #cbd5e1;
   border-radius: 1rem;
   background: var(--color-background);
-}
-
-.project-card--featured {
-  border-color: color-mix(in srgb, var(--color-primary) 45%, #cbd5e1);
 }
 
 .project-card__type {
@@ -135,14 +132,4 @@ h1 {
 .projects-cta__content > p:not(.projects-cta__eyebrow) {
   max-width: 42rem;
   margin: 1.25rem 0 1.5rem;
-}
-
-@media (min-width: 48rem) {
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .project-card--featured {
-    grid-row: span 2;
-  }
 }

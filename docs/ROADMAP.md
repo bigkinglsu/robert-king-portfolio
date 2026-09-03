@@ -16,7 +16,7 @@ Certifications, and Contact features.
 
 Status: In progress. The Home, About, Experience, and Projects pages are complete. The Experience
 page presents career history and selected client impact across enterprise, cloud, and mobile
-delivery. The Projects page highlights selected public repositories with accessible external links.
+delivery. The Projects page highlights the portfolio repository with accessible external links.
 Primary navigation accommodates the additional feature routes across desktop and mobile layouts.
 
 ## Phase 3 - Backend

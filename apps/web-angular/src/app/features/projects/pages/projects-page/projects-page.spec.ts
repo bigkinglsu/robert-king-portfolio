@@ -35,18 +35,18 @@ describe('ProjectsPage', () => {
     expect(headings.filter((heading) => heading.tagName === 'H1')).toHaveLength(1);
   });
 
-  it('should present three projects with safe external links', () => {
+  it('should present only the portfolio project with safe external links', () => {
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
     const projects = compiled.querySelectorAll('.project-grid article');
     const links = compiled.querySelectorAll<HTMLAnchorElement>('a[target="_blank"]');
 
-    expect(projects).toHaveLength(3);
+    expect(projects).toHaveLength(1);
     expect(compiled.textContent).toContain('Robert King Portfolio');
-    expect(compiled.textContent).toContain('The Grays');
-    expect(compiled.textContent).toContain('Sudoku');
-    expect(links).toHaveLength(4);
+    expect(compiled.textContent).not.toContain('The Grays');
+    expect(compiled.textContent).not.toContain('Sudoku');
+    expect(links).toHaveLength(2);
     links.forEach((link) => expect(link.getAttribute('rel')).toBe('noreferrer'));
   });
 
