@@ -4,9 +4,8 @@
 
 A modern full-stack engineering portfolio built to demonstrate enterprise software engineering practices.
 
-The current frontend includes responsive Home and About experiences plus an Experience page
-scaffold, built with lazy-loaded Angular routes, accessible semantic markup, behavioral tests, and
-stable component snapshots.
+The current frontend includes responsive Home, About, and Experience pages, built with lazy-loaded
+Angular routes, accessible semantic markup, behavioral tests, and stable component snapshots.
 
 ## Technology
 

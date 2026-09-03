@@ -19,9 +19,9 @@
 
 - [x] Home
 - [x] About
-- [ ] Experience
+- [x] Experience
   - [x] Add page component, lazy route, navigation, and baseline tests
-  - [ ] Add professional history and impact content
+  - [x] Add professional history and impact content
 - [ ] Projects
 - [ ] Skills
 - [ ] Certifications
