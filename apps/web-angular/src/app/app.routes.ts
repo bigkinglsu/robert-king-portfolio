@@ -32,6 +32,14 @@ export const routes: Routes = [
     title: 'About | Robert King',
   },
   {
+    path: 'skills',
+    loadComponent: () =>
+      import('./features/skills/pages/skills-page/skills-page').then(
+        (component) => component.SkillsPage,
+      ),
+    title: 'Skills | Robert King',
+  },
+  {
     path: '**',
     redirectTo: '',
   },

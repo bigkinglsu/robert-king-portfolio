@@ -24,7 +24,7 @@
   - [x] Add professional history and impact content
 - [x] Projects
   - [x] Add page component, lazy route, navigation, portfolio project card, and tests
-- [ ] Skills
+- [x] Skills
 - [ ] Certifications
 - [ ] Contact
 

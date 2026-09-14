@@ -10,6 +10,8 @@
 .navigation {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   justify-content: space-between;
   width: min(100% - 3rem, 70rem);
   min-height: 4.5rem;
@@ -24,6 +26,7 @@
 
 .navigation__links {
   display: flex;
+  flex-wrap: wrap;
   gap: clamp(1rem, 3vw, 2rem);
   margin: 0;
   padding: 0;

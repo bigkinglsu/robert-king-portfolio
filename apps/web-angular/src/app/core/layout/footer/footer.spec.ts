@@ -30,16 +30,17 @@ describe('Footer', () => {
     const links = compiled.querySelectorAll<HTMLAnchorElement>('.site-footer a');
 
     expect(navigation).toBeTruthy();
-    expect(links).toHaveLength(7);
+    expect(links).toHaveLength(8);
     expect(links[0].getAttribute('href')).toBe('/#home');
     expect(links[1].getAttribute('href')).toBe('/#home');
     expect(links[2].getAttribute('href')).toBe('/about');
     expect(links[3].getAttribute('href')).toBe('/projects');
-    expect(links[4].getAttribute('href')).toBe('https://github.com/bigkinglsu');
-    expect(links[4].getAttribute('target')).toBe('_blank');
-    expect(links[4].getAttribute('rel')).toBe('noopener noreferrer');
-    expect(links[5].getAttribute('href')).toBe('mailto:kinghonore1@gmail.com');
-    expect(links[6].getAttribute('href')).toBe('/#home');
+    expect(links[4].getAttribute('href')).toBe('/skills');
+    expect(links[5].getAttribute('href')).toBe('https://github.com/bigkinglsu');
+    expect(links[5].getAttribute('target')).toBe('_blank');
+    expect(links[5].getAttribute('rel')).toBe('noopener noreferrer');
+    expect(links[6].getAttribute('href')).toBe('mailto:kinghonore1@gmail.com');
+    expect(links[7].getAttribute('href')).toBe('/#home');
   });
 
   it('should render the copyright notice', () => {
