@@ -34,7 +34,7 @@ describe('Footer', () => {
     expect(links[0].getAttribute('href')).toBe('/#home');
     expect(links[1].getAttribute('href')).toBe('/#home');
     expect(links[2].getAttribute('href')).toBe('/about');
-    expect(links[3].getAttribute('href')).toBe('/#projects');
+    expect(links[3].getAttribute('href')).toBe('/projects');
     expect(links[4].getAttribute('href')).toBe('https://github.com/bigkinglsu');
     expect(links[4].getAttribute('target')).toBe('_blank');
     expect(links[4].getAttribute('rel')).toBe('noopener noreferrer');

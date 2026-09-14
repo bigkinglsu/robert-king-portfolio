@@ -42,7 +42,7 @@ describe('Header', () => {
     expect(links[1].getAttribute('href')).toBe('/#home');
     expect(links[2].getAttribute('href')).toBe('/experience');
     expect(links[3].getAttribute('href')).toBe('/about');
-    expect(links[4].getAttribute('href')).toBe('/#projects');
+    expect(links[4].getAttribute('href')).toBe('/projects');
     expect(links[5].getAttribute('href')).toBe('mailto:kinghonore1@gmail.com');
   });
 
