@@ -4,7 +4,8 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 The visitor-facing application currently includes lazy-loaded Home, About, Experience, Projects, and Skills
 pages within a shared responsive header and footer shell. The Projects page presents the public
-portfolio repository with descriptive technology labels and safe external links.
+portfolio repository and eight anonymized professional engagements, with roles, dates, contributions,
+and technology labels. External links point to the public portfolio repository and GitHub profile.
 
 ## Development server
 

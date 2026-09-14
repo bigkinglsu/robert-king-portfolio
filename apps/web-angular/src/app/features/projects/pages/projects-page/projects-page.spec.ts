@@ -31,11 +31,18 @@ describe('ProjectsPage', () => {
       compiled.querySelector('section[aria-labelledby="featured-projects-title"]'),
     ).toBeTruthy();
     expect(compiled.querySelector('section[aria-labelledby="projects-cta-title"]')).toBeTruthy();
+    expect(compiled.querySelector('section[aria-labelledby="project-history-title"]')).toBeTruthy();
+    expect(compiled.querySelector('main')).toBeNull();
+    headings.slice(1).forEach((heading, index) => {
+      expect(
+        Number(heading.tagName.slice(1)) - Number(headings[index].tagName.slice(1)),
+      ).toBeLessThanOrEqual(1);
+    });
     expect(headings[0].tagName).toBe('H1');
     expect(headings.filter((heading) => heading.tagName === 'H1')).toHaveLength(1);
   });
 
-  it('should present only the portfolio project with safe external links', () => {
+  it('should retain the portfolio source and provide descriptive safe external links', () => {
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
@@ -47,7 +54,43 @@ describe('ProjectsPage', () => {
     expect(compiled.textContent).not.toContain('The Grays');
     expect(compiled.textContent).not.toContain('Sudoku');
     expect(links).toHaveLength(2);
-    links.forEach((link) => expect(link.getAttribute('rel')).toBe('noreferrer'));
+    links.forEach((link) => {
+      expect(link.getAttribute('rel')).toBe('noreferrer');
+      expect(link.getAttribute('aria-label')).toContain('opens in a new tab');
+    });
+    expect(Array.from(links, (link) => link.href)).toEqual([
+      'https://github.com/bigkinglsu/robert-king-portfolio',
+      'https://github.com/bigkinglsu',
+    ]);
+  });
+
+  it('should render eight professional engagements with contributions and technologies', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const projects = compiled.querySelectorAll('.project-history article');
+
+    expect(projects).toHaveLength(8);
+    expect(Array.from(projects, (project) => project.querySelector('h3')?.textContent)).toEqual([
+      'Archive management and enterprise search',
+      'CMS integration and form modernization',
+      'Flutter developer onboarding',
+      'Field sales and merchandising iOS app',
+      'Brand ambassador Android app',
+      'Compliance application cloud migration',
+      'Retail marketing sites and mobile solutions',
+      'Hybrid retail mobile applications',
+    ]);
+    projects.forEach((project) => {
+      expect(project.querySelector('.project-card__meta')?.textContent).toMatch(/.+ · .+\d{4}/);
+      expect(project.querySelectorAll('.project-card__contributions li').length).toBeGreaterThan(0);
+      expect(project.querySelectorAll('.project-card__technologies li').length).toBeGreaterThan(0);
+      expect(project.querySelector('a')).toBeNull();
+    });
+  });
+
+  it('should match the rendered professional project history snapshot', () => {
+    const history = (fixture.nativeElement as HTMLElement).querySelector('.project-history');
+    expect(history).toBeTruthy();
+    expect(history).toMatchSnapshot();
   });
 
   it('should match the rendered Projects hero snapshot', () => {
