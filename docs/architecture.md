@@ -23,6 +23,7 @@ Architecture Style
 - Lazy-loaded visitor-facing feature routes
 - Projects feature content describes the portfolio repository and uses direct external links rather
   than runtime API requests
+- Skills groups reflect published experience and portfolio practices, with internal links to supporting pages
 - Router-managed fragment navigation and scroll-position restoration
 - REST API
 - Clean Architecture principles
