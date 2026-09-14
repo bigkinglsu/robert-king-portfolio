@@ -3,8 +3,8 @@
     <p class="projects-hero__eyebrow">Projects</p>
     <h1 id="projects-title">Building useful software with care from idea to delivery.</h1>
     <p class="projects-hero__summary">
-      A closer look at the engineering decisions, quality practices, and evolving technology behind
-      this portfolio.
+      Explore this portfolio alongside professional projects spanning enterprise search, cloud
+      modernization, content platforms, and mobile applications.
     </p>
   </div>
 </section>
@@ -47,12 +47,58 @@
   </div>
 </section>
 
+<section class="project-history" aria-labelledby="project-history-title">
+  <div class="project-history__content">
+    <div class="section-heading">
+      <p class="section-heading__eyebrow">Professional work</p>
+      <h2 id="project-history-title">Project history</h2>
+      <p class="project-history__intro">
+        Selected engagements across enterprise and mobile engineering. Client names are kept
+        confidential; each entry describes my role and contributions.
+      </p>
+    </div>
+    <div class="project-history__grid">
+      @for (project of projectHistory; track project.title) {
+        <article class="project-card">
+          <div class="project-card__heading">
+            <p class="project-card__type">{{ project.client }}</p>
+            <h3>{{ project.title }}</h3>
+            <p class="project-card__meta">{{ project.role }} · {{ project.dates }}</p>
+          </div>
+          <p>{{ project.summary }}</p>
+          <ul
+            class="project-card__contributions"
+            [attr.aria-label]="project.title + ' contributions'"
+          >
+            @for (contribution of project.contributions; track contribution) {
+              <li>{{ contribution }}</li>
+            }
+          </ul>
+          <ul
+            class="project-card__technologies"
+            [attr.aria-label]="project.title + ' technologies'"
+          >
+            @for (technology of project.technologies; track technology) {
+              <li>{{ technology }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
 <section class="projects-cta" aria-labelledby="projects-cta-title">
   <div class="projects-cta__content">
     <p class="projects-cta__eyebrow">More on GitHub</p>
     <h2 id="projects-cta-title">Follow the work as it evolves.</h2>
     <p>Explore the public repository and follow the ongoing development of this portfolio.</p>
-    <a href="https://github.com/bigkinglsu" target="_blank" rel="noreferrer">
+    <a
+      href="https://github.com/bigkinglsu"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Visit GitHub profile (opens in a new tab)"
+    >
       Visit GitHub profile <span aria-hidden="true">↗</span>
     </a>
   </div>
